@@ -1,33 +1,31 @@
 #include "main.h"
-
 /**
- * _strncat - two words
- * @dest : pointer to char param
- * @src : pointer to char param
- * @n : int parameter
- * Return: *dest
+ * _strlen - returns the length of string
+ * @s: string to return length
+ * Return: length of @s
  */
+int _strlen(char *s)
+{
+	int length = 0;
 
+	while (*s++)
+		length++;
+	return (length);
+}
+/**
+ * _strncat - appends not more than @n characters
+ * @dest: string @src is appended here
+ * @src: string @dest is appended to
+ * @n: length of string should be less than this value
+ * Return: appendes string
+ */
 char *_strncat(char *dest, char *src, int n)
 {
-	int m;
+	int dest_len = _strlen(dest);
 	int i;
 
-	m = 0;
-
-	for (i = 0; i < 1000; i++)
-	{
-		if (dest[i] == '\0')
-		{
-			break;
-		}
-		m++;
-	}
-
-	for (i = 0; src[i] != '\0' && i < n; i++)
-	{
-		dest[m + i] = src[i];
-	}
-	dest[m + i] = '\0';
+	for (i = 0 ; i < n && src[i] != '\0' ; i++)
+		dest[dest_len + i] = src[i];
+	dest[dest_len + i] = '\0';
 	return (dest);
 }
