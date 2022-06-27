@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * create_array: Creates an array of chars
+ * *create_array: creates an array of chars,
  * @size: size of the array to create
  * @c: char to intialize the array
  * Return: pointer to the array (Success), NULL (Error)
