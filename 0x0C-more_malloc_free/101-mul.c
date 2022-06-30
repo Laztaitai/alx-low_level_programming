@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - multiplies two positive numbers
+ * main - computes the sum of the numbers x and y
  * @argc: n arguments
  * @argv: args
  * Return: int
